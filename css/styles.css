@@ -495,7 +495,7 @@ body {
 
 /*-------------------------------footer-----------------------------------------*/
 .footer {
-    width: 1440px;
+    min-width: 1440px;
     margin-top: -100px;
     margin-left: -130px;
     background-color: rgba(118, 71, 154, 1);
