@@ -67,6 +67,10 @@ body {
     position: absolute;
     left: 0px;
     z-index: 1;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.button:hover {
+     box-shadow: 0 0 20px rgba(58, 28, 81, 0.5);
 }
 /*-------------------------------header-------------------------------------*/
 .header {
@@ -96,14 +100,21 @@ body {
     margin: 0px 0px 0px 438px;
     padding: 5px 0;
 }
+
 /*---------------------------------navigation-------------------------------------*/
 .menu_list{
     flex-wrap: wrap;
     display: flex;
 }
 
-.menu_item{
+.menu_item {
+    opacity: 1;
+    color: #DD4C71;
+    transition: opacity 0.3s ease-in-out;
+}
 
+.menu_item:hover {
+    opacity: 0.8; /* Set the desired opacity on hover */
 }
 
 .menu_item:not(:last-child){
@@ -291,6 +302,8 @@ body {
     margin: 0 auto;
 }
 .gallery-image{
+    width: 223px;
+    height: 150px;
 }
 .gallery-image:not(:first-child) {
     margin: 0px 0px 0px 15px;
@@ -311,6 +324,97 @@ body {
     margin-bottom: 33px;
     font-weight: 400;
     word-wrap: break-word;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(58, 28, 81, 0.5);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup-image {
+    display: block;
+    margin: 0 auto;
+    width: 1237px;
+    height: 627px;
+
+}
+#popupImage {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-image img {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-image:hover img {
+    width: 213px;
+    height: 140px;
+    opacity: 1;
+    background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%);
+    border-radius: 15px;
+    border: 5px #DD4C71 solid;
+}
+.gallery-image-selected {
+    width: 213px;
+    height: 140px;
+    opacity: 1;
+    background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%);
+    border-radius: 15px;
+    border: 5px #DD4C71 solid;
+}
+
+.prev-btn,
+.next-btn,
+.close-btn {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.prev-btn { left: 80px; transform: translateY(-50%); }
+.next-btn { right: 80px; transform: translateY(-50%); }
+.close-btn { top: 0px; right: 85px; }
+
+.prev-btn:hover,
+.next-btn:hover,
+.close-btn:hover {
+    color: #ddd;
+    opacity: 0.7;
 }
 /*-------------------------------Services-----------------------------------------*/
 #Services {
@@ -448,7 +552,14 @@ body {
 }
 .contact_item{
 }
+.content {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
 
+.content:hover {
+    opacity: 0.8;
+}
 .map_block {
     width: 467px;
     height: 300px;
@@ -509,13 +620,19 @@ body {
     font-weight: 400;
     word-wrap: break-word;
 }
-.footer-content{
+.footer-content {
     color: rgba(255, 255, 255, 0.90);
     font-size: 18px;
     font-weight: 400;
     word-wrap: break-word;
     text-decoration: none !important;
     text-align: left;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer-content:hover {
+    opacity: 0.8;
 }
 
 .footer_logo{
@@ -536,7 +653,14 @@ body {
     word-wrap: break-word;
     text-decoration: none !important;
 }
+.footer_item {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
 
+.footer_item:hover {
+    opacity: 0.8;
+}
 
 /*-------------------------------Responsive-----------------------------------------*/
 @media (max-width: 1440px){
@@ -574,11 +698,11 @@ body {
     width: 224px;
     height: 200px;
     margin: 0 auto;
-}
-.title-text_block{
-    width: 710px;
-    margin: 0 auto;
-}
+    }
+    .title-text_block{
+        width: 710px;
+        margin: 0 auto;
+    }
 /*-------------------------------about us-----------------------------------------*/
     .about-us__title{
         margin-left: 15px;
@@ -844,6 +968,9 @@ body {
         margin: 0 auto;
         left: 38%;
     }
+    .about-us-block{
+        margin-left:0px;
+    }
      /*-------------------------------gallery-----------------------------------------*/
 
     /*-------------------------------footer-----------------------------------------*/
@@ -885,6 +1012,22 @@ body {
     .gallery-block {
         width: 100%;
         text-align: center;
+        margin-left:0px;
+    }
+        .popup-image {
+        display: block;
+        margin: 0 auto;
+        width: 872px;
+        height: 442px;
+    }
+    .prev-btn { left: 120px; top: 470px }
+    .next-btn { right: 120px; top: 470px; }
+    .close-btn { top: -5px; left: 765px; }
+    .gallery-title{
+        margin-left: 0px;
+    }
+    .gallery-text{
+        margin-left:0px;
     }
 }
 @media (max-width: 800px) {
@@ -995,6 +1138,9 @@ body {
     .about-us_item{
 
     }
+    .about-us-block{
+        margin-left: 0px;
+    }
     .about-us__item-image{
         margin-bottom: 10px;
     }
@@ -1021,21 +1167,51 @@ body {
     .curves{
         margin: 0px 0px 50px -50px;
     }
-
+    .gallery-image {
+        margin-left: 200px;
+    }
+    .gallery-image:nth-last-child(-n+2) {
+        display: block;
+    }
     .gallery-block {
         width: 250px;
         display: flex;
         flex-direction: column;
         text-align: center;
     }
-
     .gallery-image:not(:first-child) {
         margin: 10px 0px 0px 0;
+        margin-left: 200px;
+    }
+    .popup-image {
+        display: block;
+        margin: 0 auto;
+        width: 793px;
+        height: 402px;
+    }
+    .prev-btn { left: 100px; top: 430px }
+    .next-btn { right: 100px; top: 430px; }
+    .close-btn { top: -5px; left: 690px; }
+
+
+    .gallery-text{
+        margin-right: 55px;
+    }
+    .gallery-title{
+        margin-right: 50px;
     }
 /*-------------------------------Services-----------------------------------------*/
     #Services {
         padding: 650px 0;
         text-align: center;
+    }
+    .services-title{
+        width: 100%;
+        align-items: center;
+        margin-left: 0px;
+    }
+    .services-list{
+        margin-left:0px;
     }
 
 /*-------------------------------Contact us-----------------------------------------*/
@@ -1099,6 +1275,24 @@ body {
     .button-about{
         left: 25%;
     }
+    .popup-image {
+        display: block;
+        margin: 0 auto;
+        width: 458px;
+        height: 232px;
+    }
+    .gallery-image {
+        margin-left: 120px;
+    }
+    .gallery-image:not(:first-child) {
+        margin-left: 120px;
+    }
+    .gallery-image:nth-last-child(-n+2) {
+        display: block;
+    }
+    .prev-btn { left: 70px; top: 270px }
+    .next-btn { right: 70px; top: 270px; }
+    .close-btn { top: -5px; left: 400px; }
 }
 @media (max-width: 376px) {
     /*-------------------------------header-----------------------------------------*/
@@ -1142,9 +1336,11 @@ body {
         top: 70%;
         left: 35%;
     }
-
+    .title-text_block{
+        width: 375px;
+    }
     .button-about{
-        left: 0%;
+        left: 20%;
     }
     .button-main{
         margin-left: -25px;
@@ -1155,17 +1351,30 @@ body {
     .gallery-image {
         margin-left: 30px;
     }
+    .popup-image {
+        display: block;
+        margin: 0 auto;
+        width: 353px;
+        height: 179px;
+    }
+    .prev-btn { left: 50px; top: 220px }
+    .next-btn { right: 50px; top: 220px; }
+    .close-btn { top: -5px; left: 310px; }
     .gallery-image:not(:first-child) {
         margin-left: 30px;
     }
     .gallery-image:nth-last-child(-n+2) {
         display: block;
     }
+    .gallery-block{
+        margin-right:0px;
+        margin-left:40px;
+    }
     .gallery-title{
-        margin-right: 20px;
+        margin-right: -20px;
     }
     .gallery-text{
-        margin-right: 10px;
+        margin-right: -20px;
     }
     /*-------------------------------services-----------------------------------------*/
     .service-block{
@@ -1175,6 +1384,9 @@ body {
     }
     .main-block__body{
         margin-right:50px;
+    }
+    .services-container{
+        margin-left:50px;
     }
     .list-block{
         width: 200px;
@@ -1224,6 +1436,9 @@ body {
     .contact-list {
         width: 300px;
         margin: 0 auto;
+    }
+    .contact-title{
+        margin-left:30px;
     }
     .left_block {
         display: flex;

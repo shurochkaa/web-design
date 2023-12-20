@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
     <title>Party Pros</title>
 </head>
 <body>
@@ -115,16 +116,25 @@
                             <div class="gallery-text">Unforgettable moments</div>
                         </div>
                         <div class="popup_gallery gallery-block">
-                            <a href="" class="gallery-image"><img src="img/Home/Gallery/kids05.svg" alt="kids05"></a>
-                            <a href="" class="gallery-image"><img src="img/Home/Gallery/kids04.svg" alt="kids04"></a>
-                            <a href="" class="gallery-image"><img src="img/Home/Gallery/kids03.svg" alt="kids03"></a>
-                            <a href="" class="gallery-image"><img src="img/Home/Gallery/kids01.svg" alt="kids01"></a>
-                            <a href="" class="gallery-image"><img src="img/Home/Gallery/kids02.svg" alt="kids02"></a>
+                            <a href="img/Home/Gallery/kids05.svg" class="gallery-image"><img src="img/Home/Gallery/kids05.svg" alt="kids05"></a>
+                            <a href="img/Home/Gallery/kids04.svg" class="gallery-image"><img src="img/Home/Gallery/kids04.svg" alt="kids04"></a>
+                            <a href="img/Home/Gallery/kids03.svg" class="gallery-image"><img src="img/Home/Gallery/kids03.svg" alt="kids03"></a>
+                            <a href="img/Home/Gallery/kids01.svg" class="gallery-image"><img src="img/Home/Gallery/kids01.svg" alt="kids01"></a>
+                            <a href="img/Home/Gallery/kids02.svg" class="gallery-image"><img src="img/Home/Gallery/kids02.svg" alt="kids02"></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-content">
+                <img src="" alt="Popup Image" class="popup-image" id="popupImage">
+                <img src="img/Home/Gallery/Button left.png" alt="Previous Image" class="prev-btn" onclick="changeImage(-1)">
+                <img src="img/Home/Gallery/Button right.png" alt="Next Image" class="next-btn" onclick="changeImage(1)">
+                <img src="img/Home/Gallery/Cross.png" alt="Close" class="close-btn" onclick="closePopup()">
+            </div>
+        </div>
         <section id="Services">
             <div class="services-content">
                 <div class="services-container">
@@ -184,32 +194,32 @@
                             <div class="left_block">
                                 <ul class="contact-list">
                                     <li class="contact_item contact_block">
+                                        <img src="img/Home/Contact us/Phoneicon.svg" alt="Phone" width="24" height="24">
                                         <a href="#" class="contact_item content">
-                                            <img src="img/Home/Contact us/Phoneicon.svg" alt="Phone" width="24" height="24">
                                             <span>(437) 034-4636</span>
                                         </a>
                                     </li>
                                     <li class="contact_item contact_block">
+                                        <img src="img/Home/Contact us/Emailicon.svg" alt="Email" width="24" height="24">
                                         <a href="#" class="contact_item content">
-                                            <img src="img/Home/Contact us/Emailicon.svg" alt="Email" width="24" height="24">
                                             <span>party-pros@gmail.com</span>
                                         </a>
                                     </li>
                                     <li class="contact_item contact_block">
+                                        <img src="img/Home/Contact us/Mapicon.svg" alt="Address" width="24" height="24">
                                          <a href="#" class="contact_item content">
-                                            <img src="img/Home/Contact us/Mapicon.svg" alt="Address" width="24" height="24">
                                             <span>2980 Wallace Street</span>
                                         </a>
                                     </li>
                                     <li class="contact_item contact_block">
+                                        <img src="img/Home/Contact us/Facebookicon.svg" alt="Facebook" width="24" height="24">
                                         <a href="#" class="contact_item content">
-                                            <img src="img/Home/Contact us/Facebookicon.svg" alt="Facebook" width="24" height="24">
                                             <span>PartyPros</span>
                                         </a>
                                     </li>
                                     <li class="contact_item contact_block">
+                                        <img src="img/Home/Contact us/telegram.svg" alt="Telegram" width="24" height="24">
                                         <a href="#" class="contact_item content">
-                                            <img src="img/Home/Contact us/telegram.svg" alt="Telegram" width="24" height="24">
                                             <span>@PartyPros</span>
                                         </a>
                                     </li>
@@ -229,32 +239,32 @@
                         <a href="" class="footer_logo">Party Pros</a>
                         <ul class="contact-list">
                             <li class="contact_item contact_block">
+                                <img src="img/Home/Contact us/phone.png" alt="Phone" width="24" height="24">
                                 <a href="#" class="contact_item footer-content">
-                                    <img src="img/Home/Contact us/phone.png" alt="Phone" width="24" height="24">
                                     <span>(437) 034-4636</span>
                                 </a>
                             </li>
                             <li class="contact_item contact_block">
+                                <img src="img/Home/Contact us/email.png" alt="Email" width="24" height="24">
                                 <a href="#" class="contact_item footer-content">
-                                    <img src="img/Home/Contact us/email.png" alt="Email" width="24" height="24">
                                     <span>party-pros@gmail.com</span>
                                 </a>
                             </li>
                             <li class="contact_item contact_block">
+                                <img src="img/Home/Contact us/mapic.png" alt="Address" width="24" height="24">
                                 <a href="#" class="contact_item footer-content">
-                                    <img src="img/Home/Contact us/mapic.png" alt="Address" width="24" height="24">
                                     <span>2980 Wallace Street</span>
                                 </a>
                             </li>
                             <li class="contact_item contact_block">
+                                <img src="img/Home/Contact us/facebook.png" alt="Facebook" width="24" height="24">
                                 <a href="#" class="contact_item footer-content">
-                                    <img src="img/Home/Contact us/facebook.png" alt="Facebook" width="24" height="24">
                                     <span>PartyPros</span>
                                 </a>
                             </li>
                             <li class="contact_item contact_block">
+                                <img src="img/Home/Contact us/telegram.png" alt="Telegram" width="24" height="24">
                                 <a href="#" class="contact_item footer-content">
-                                    <img src="img/Home/Contact us/telegram.png" alt="Telegram" width="24" height="24">
                                     <span>@PartyPros</span>
                                 </a>
                             </li>
